@@ -37,13 +37,23 @@ const NavbarCategories = (props) => {
     categoriesSection = categories.map((item) =>
       selectedCategory === item ? (
         <li>
-          <a href="/#" role="button" onClick={() => setCategoryItem(item)}>
+          <a
+            href="/#"
+            role="button"
+            key={item + 1}
+            onClick={() => setCategoryItem(item)}
+          >
             <b>{item}</b>
           </a>
         </li>
       ) : (
         <li>
-          <a href="/#" role="button" onClick={() => setCategoryItem(item)}>
+          <a
+            href="/#"
+            key={item}
+            role="button"
+            onClick={() => setCategoryItem(item)}
+          >
             {item}
           </a>
         </li>

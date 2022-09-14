@@ -115,6 +115,7 @@ body {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  
 }
 .product-list-item {
   flex: 1 1 20%;
@@ -375,6 +376,26 @@ body {
   background-color: rgb(246, 224, 224);
   font-size: 12px;
 }
+/*Pagination*/
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: red;
+  color: white;
+}
+
 @media only screen and (min-width: 375px) and (max-width: 959px) {
   .navbar > ul {
     display: flex;
