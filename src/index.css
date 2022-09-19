@@ -395,6 +395,38 @@ body {
   background-color: red;
   color: white;
 }
+/*Cart */
+.cart-holder{
+  overflow-x:auto;
+}
+.cart-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.cart-table > th, td {
+  text-align:center;
+  padding: 8px;
+}
+
+.cart-table > th, td > img {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #bdbdbd;
+}
+
+.cart-table > tr:nth-child(even){background-color: #f2f2f2}
+
+.main-section-cart {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+
 
 @media only screen and (min-width: 375px) and (max-width: 959px) {
   .navbar > ul {

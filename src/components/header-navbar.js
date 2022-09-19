@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import CartCounter from "./cart-counter";
 const HeaderNavbar = () => {
   return (
     <div className="navbar-header">
@@ -13,11 +14,7 @@ const HeaderNavbar = () => {
           <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <Link to="/cart">
-            <i class="fa-solid fa-cart-shopping"></i>
-            &nbsp;
-            <span className="navbar-badge">0</span>
-          </Link>
+          <CartCounter />
         </li>
       </ul>
     </div>

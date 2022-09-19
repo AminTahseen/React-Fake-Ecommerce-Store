@@ -6,14 +6,14 @@ import { useEffect, useState } from "react";
 import Axios from "axios";
 import NavbarCategories from "../components/navbar-categories";
 import ProductDetailsSection from "../components/product-details-section";
+import { PRODUCT_DETAILS_URL_2 } from "../utils/Constants";
 const ProductDetails = () => {
   const [productDetails, setproductDetails] = useState(null);
   const { id } = useParams();
-  const URL = `https://fakestoreapi.com/products/${id}`;
+  const URL = `${PRODUCT_DETAILS_URL_2}${id}`;
   let detailsDiv = null;
 
   useEffect(() => {
-    console.log("URL : " + URL);
     const getProductDetails = () => {
       Axios.get(URL).then((res) => {
         setproductDetails(res.data);

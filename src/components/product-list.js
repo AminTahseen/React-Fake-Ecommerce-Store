@@ -1,7 +1,7 @@
 import Axios from "axios";
 import ProductListItem from "./product-list-item";
 import { useEffect, useState } from "react";
-import { PRODUCTS_URL, PRODUCT_DETAILS_URL } from "../utils/Constants";
+import { PRODUCTS_URL, PRODUCT_BY_CATEGORY } from "../utils/Constants";
 import Pagination from "./pagination";
 
 const ProductList = (props) => {
@@ -16,7 +16,7 @@ const ProductList = (props) => {
   useEffect(() => {
     let URL = PRODUCTS_URL;
     if (category !== "") {
-      URL = `${PRODUCT_DETAILS_URL}${category}`;
+      URL = `${PRODUCT_BY_CATEGORY}${category}`;
     }
     const getProducts = () => {
       setProducts(null);
